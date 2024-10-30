@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  cursor: url("cursermain.png"), auto;
+  font-family: val;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+  background-image: url(bgimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+button {
+  background-color: #fd4556;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: url("clickcursor.png"), auto;
+  font-family: val;
+}
+
+button:hover {
+  background-color: #bd3944;
+  font-family: val;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 400px;
+  }
+}
+
+.rplogo,
+.vplogo,
+.arrow {
+  max-width: 50px; /* Ensures the image doesn’t exceed the container width */
+  vertical-align: middle;
+  width: auto; /* Adjusts the width automatically */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 auto; /* Centers the image (if needed) */
+  border-radius: 100%;
+}
+
+@font-face {
+  font-family: "val"; /* Custom name for the font */
+  src: url("VALORANT\ FONT.TTF") format("truetype"); /* Path to the font file */
+  /* Add additional formats if available (woff, woff2, otf) */
+}
+
+/* ------------------- */
+
+.social-box {
+  margin-top: 20px; /* Space between the main container and social box */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  cursor: url("clickcursor.png"), auto;
+}
+
+.social-icon {
+  width: 40px; /* Set icon size */
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+/* Animation for modal entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for modal exit */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  animation: fadeIn 0.3s; /* Add fade-in animation */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.vp-result {
+  font-size: 1.5em; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  color: #fd4556; /* You can change this color to match your theme */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+}

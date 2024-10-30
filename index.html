@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RP to VP converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="maintext">
+        Radianite points <br />to <br />Valorant Points Converter
+        <p>
+          <img src="rp.png" alt="RP icon" class="rplogo" />
+          <img src="arrow.svg" alt="Right arrow" class="arrow" />
+          <img src="vp.png" alt="VP icon" class="vplogo" />
+        </p>
+      </h1>
+      <label for="rpInput">Enter RP:</label>
+      <input type="number" id="rpInput" placeholder="Enter RP value" />
+      <button onclick="convertRPtoVP()">
+        Convert<br /><b
+          >(brought to you by <br />@justvalorant.gg [ yt & insta ])</b
+        >
+      </button>
+      <!-- Modal Structure -->
+<div id="modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalMessage"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  
+
+      <div class="social-box">
+        <a href="https://www.instagram.com/justvalorant.gg" target="_blank">
+          <img
+            src="instalogomain.png"
+            alt="Instagram"
+            class="socialmediaicon"
+          />
+        </a>
+        <a
+          href="https://youtube.com/@justvalorantdotgg?sub_confirmation=1"
+          target="_blank"
+        >
+          <img
+            src="youtubelogomain.png"
+            alt="YouTube"
+            class="socialmediaicon"
+          />
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
